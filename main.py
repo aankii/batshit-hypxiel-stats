@@ -52,7 +52,7 @@ if gamemode == "S" or gamemode == "s":
     print(f"KDR: {kdr}")
     print(f"Win Percentage: {winper}%")
     print(f"Playtime: {pt} Hours")
-    time.sleep(600)
+    time.sleep(650)
 
 else:
     b = f"{userinput}'s Bedwars Data"
@@ -69,5 +69,5 @@ else:
         print("Comment: If this player is in your game, They will be easy to kill!")
     if fkdr < 2 and bwp > 40:
         print("Comment: If this player is in your game,They might be getting boosted due to their low FKDR and high win percentage")
-        time.sleep(600)
+        time.sleep(650)
 
