@@ -31,14 +31,13 @@ bwcoins = str(hydata["player"]["stats"]["Bedwars"]["coins"])
 fk = float(hydata["player"]["stats"]["Bedwars"]["final_kills_bedwars"])
 fd = float(hydata["player"]["stats"]["Bedwars"]["final_deaths_bedwars"])
 fkdr = str((fk / fd))
-fkdr = fkdr[:4]
+fkdr = float(fkdr[:4])
+x = "You might want to dodge this game!"
 bgp = float(hydata["player"]["stats"]["Bedwars"]["games_played_bedwars"])
 bgw = float(hydata["player"]["stats"]["Bedwars"]["wins_bedwars"])
 bwp = (bgw / bgp)
 bwp = str(bwp * 100)
-bwp = bwp[:5]
-
-
+bwp = float(bwp[:5])
 
 gamemode = input("(S)kywars or (B)edwars >>> ")
 
@@ -64,8 +63,9 @@ else:
     print(f"Coins: {bwcoins}")
     print(f"FKDR: {fkdr}")
     print(f"Win Percentage: {bwp}%")
-    time.sleep(600)
-
-
-
-
+    if fkdr > 4 and bwp > 50:
+        print("Comment: If this player is in your game, You may want to dodge!")
+    if fkdr < 2:
+        print("Comment: If this player is in your game, They will be easy to kill!")
+    if fkdr < 2 and bwp > 40:
+        print("Comment: If this player is in your game,They might be getting boosted due to their low FKDR and high win percentage")
