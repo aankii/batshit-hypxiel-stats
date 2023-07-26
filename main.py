@@ -52,6 +52,8 @@ if gamemode == "S" or gamemode == "s":
     print(f"KDR: {kdr}")
     print(f"Win Percentage: {winper}%")
     print(f"Playtime: {pt} Hours")
+    if winper > 50:
+        print("This guy is kinda good, you might wanna dodge!")
     time.sleep(650)
 
 else:
